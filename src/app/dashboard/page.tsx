@@ -7,6 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import { NavDocuments } from '@/components/nav-documents'
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarInset,
@@ -16,14 +17,14 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { BellDot } from 'lucide-react'
+import { BellDot, Search } from 'lucide-react'
 
 export default function Dashboard() {
   return (
     <SidebarProvider className="dark">
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+        <header className="flex h-16 shrink-0 items-center justify-between gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">  
             <SidebarTrigger className="-ml-1" />
             <Separator
@@ -33,29 +34,33 @@ export default function Dashboard() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  {/*<BreadcrumbLink href="#">
+                  {/* <BreadcrumbLink href="#">
                     Building Your Application
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem> */}
+                <BreadcrumbItem>  */}
                   <BreadcrumbPage className="text-white font-bold text-lg">Dashboard</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
+          </div>
 
-            <div className="flex gap-4 items-center justify-around">
+          <div className="flex gap-4 items-center justify-around px-4">
+            <div>
               <Input placeholder="Pesquisar..." className="text-white"/>
-              <Button className="bg-green-700 text-white font-semibold hover:bg-green-600 gap-4">
-                <BellDot />
-              </Button>
-              <Button className="bg-green-700 text-white font-semibold hover:bg-green-600 gap-4">
-                + Criar nova campanha
-              </Button>
+
             </div>
+            <Button className="bg-green-700 text-white font-semibold hover:bg-green-600">
+              <BellDot />
+            </Button>
+            <Button className="bg-green-700 text-white font-semibold hover:bg-green-600">
+              + Criar nova campanha
+            </Button>
           </div>
           
         </header>
+
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="bg-muted/50 aspect-video rounded-xl" />

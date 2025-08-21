@@ -11,7 +11,8 @@ import {
   SquareTerminal,
   User,
   BookCheck,
-  ChartSpline
+  ChartSpline,
+  Triangle
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -36,7 +37,7 @@ const data = {
   teams: [
     {
       name: "Performance Digital",
-      logo: GalleryVerticalEnd,
+      logo: Triangle,
       plan: "Agência de marketing",
     },
     {
@@ -76,6 +77,10 @@ const data = {
       url: "#",
       icon: Zap,
       items: [
+        {
+          title: "Recentes",
+          url: "#",
+        },
         {
           title: "Em andamento",
           url: "#",
