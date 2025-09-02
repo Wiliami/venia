@@ -23,10 +23,9 @@ export function DialogDemo() {
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>Nova campanha</DialogTitle>
+            <DialogTitle>+ Nova campanha</DialogTitle>
             <DialogDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
+              Crie e configure sua campanha.
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4">

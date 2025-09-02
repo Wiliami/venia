@@ -14,8 +14,8 @@ import { BellDot } from 'lucide-react'
 export function Alert() {
    return (
         <AlertDialog>
-            <AlertDialogTrigger className="bg-green-500 rounded">
-                <BellDot />
+            <AlertDialogTrigger>
+                <BellDot className="bg-green-500 rounded" />
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
@@ -26,8 +26,8 @@ export function Alert() {
                 </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction>Continue</AlertDialogAction>
+                <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                <AlertDialogAction>Continuar</AlertDialogAction>
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
