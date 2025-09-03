@@ -12,34 +12,48 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-export function DialogDemo() {
+interface schemaInfoDialog {
+  tagButton: string
+  title?: string
+  description?: string
+  field_first?: string
+  field_second?: string
+  field_third?: string
+  placeholder_first?: string 
+  placeholder_second?: string
+  placeholder_third?: string
+}
+
+export function DialogDemo({ 
+  tagButton, title, description, field_first, field_second, field_third, placeholder_first,
+  placeholder_second, placeholder_third }: schemaInfoDialog) {
   return (
     <Dialog>
       <form>
         <DialogTrigger asChild>
             <Button className="bg-green-700 text-white font-semibold hover:bg-green-600">
-                + Criar nova Campanha
+                {tagButton}
             </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>+ Nova campanha</DialogTitle>
+            <DialogTitle>{title}</DialogTitle>
             <DialogDescription>
-              Crie e configure sua campanha.
+              {description}
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4">
             <div className="grid gap-3">
-              <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" name="name" defaultValue="Nome da campanha" />
+              <Label htmlFor="name-1">{field_first}</Label>
+              <Input id="name-1" name="name" defaultValue={placeholder_first} />
             </div>
             <div className="grid gap-3">
-              <Label htmlFor="username-1">Objetivo da campanha</Label>
-              <Input id="username-1" name="username" defaultValue="Engajamento" />
+              <Label htmlFor="username-1">{field_second}</Label>
+              <Input id="username-1" name="username" defaultValue={placeholder_second} />
             </div>
              <div className="grid gap-3">
-              <Label htmlFor="username-1">Público</Label>
-              <Input id="username-1" name="username" defaultValue="Aberto" />
+              <Label htmlFor="username-1">{field_third}</Label>
+              <Input id="username-1" name="username" defaultValue={placeholder_third} />
             </div>
           </div>
           <DialogFooter>

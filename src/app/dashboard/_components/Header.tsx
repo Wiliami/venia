@@ -53,7 +53,7 @@ export function Header() {
               <BellDot />
             </Button> */}
             <Alert />
-            <DialogDemo />
+            <DialogDemo tagButton="+ Criar nova Campanha" />
           </div>
           
         </header>

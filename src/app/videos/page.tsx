@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, Play, Clock } from "lucide-react";
 import { mockVideos } from './mockVideos'
+import { DialogDemo } from '@/app/dashboard/_components/DialogDemo'
 
 export default function Videos() {
     const [searchTerm, setSearchTerm] = useState("");
@@ -21,28 +22,42 @@ export default function Videos() {
         <>
             <SidebarProvider>
                 <AppSidebar />
-                <Header />
                 <SidebarInset>
-                
+                <Header />
+
                 <div className="bg-background">
                     {/* Header */}
                     <div className="border-b border-border bg-card">
                         <div className="container mx-auto px-4 py-6">
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                             <div>
-                            <h1 className="text-3xl font-bold text-foreground">VideoTech</h1>
-                            <p className="text-muted-foreground">Aprenda tecnologia com os melhores vídeos</p>
+                            <h1 className="text-3xl font-bold text-foreground">Área de membros</h1>
+                            <p className="text-muted-foreground">Seja bem-vindo(a), Wiliamis Oliveira</p>
                             </div>
                             
                             {/* * Search */}
-                            <div className="relative w-full max-w-md">
-                            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                            <Input
-                                placeholder="Buscar vídeos..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                className="pl-10"
-                            />
+                            <div className="relative w-full max-w-md flex gap-5">
+                                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                                <Input
+                                    placeholder="Buscar vídeos..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    className="pl-10"
+                                />
+                                {/* <Button className="bg-black hover:bg-gray-950 text-white ">
+                                    + Novo vídeo
+                                </Button> */}
+                                <DialogDemo 
+                                    tagButton="+ Novo vídeo" 
+                                    title="Upload video"
+                                    description="Preencha os campos para adicionar o vídeo."
+                                    field_first="Nome"
+                                    field_second="Descrição"
+                                    field_third="Duração"
+                                    placeholder_first="Título do vídeo"
+                                    placeholder_second="Descrição do vídeo"
+                                    placeholder_third="Duração do vídeo: Ex.: 10:20"
+                                />
                             </div>
                         </div>
                         </div>
@@ -99,6 +114,8 @@ export default function Videos() {
                         )}
                     </div>
                 </div>
+                
+                
                 </SidebarInset>
             </SidebarProvider>
         </>

@@ -19,15 +19,14 @@ export function Alert() {
             </AlertDialogTrigger>
             <AlertDialogContent>
                 <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogTitle>Atualização: Campanha Y</AlertDialogTitle>
                 <AlertDialogDescription>
-                    This action cannot be undone. This will permanently delete your account
-                    and remove your data from our servers.
+                    A camanha que você criou recebeu uma nova atualização.
                 </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                <AlertDialogAction>Continuar</AlertDialogAction>
+                <AlertDialogCancel>Fechar</AlertDialogCancel>
+                {/* <AlertDialogAction>Continuar</AlertDialogAction> */}
                 </AlertDialogFooter>
             </AlertDialogContent>
         </AlertDialog>
